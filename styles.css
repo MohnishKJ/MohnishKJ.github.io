@@ -1,259 +1,495 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #0a192f; /* Dark blue background */
-    color: #fff; /* White text */
-    overflow-x: hidden;
-  }
-  
-  /* Hero Section */
-  #hero {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hero-content {
-    z-index: 2;
-  }
-  
-  .name {
-    font-size: 4rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #64ffda, #6ee7b7);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  .tagline {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #64ffda;
-    text-shadow: 0 0 5px #64ffda;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-    opacity: 0;
-    animation: slideUp 1s ease-in-out forwards;
-    animation-delay: 1s;
-  }
-  
-  .background-effects {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(100, 255, 218, 0.2), transparent);
-    animation: pulse 5s infinite;
-    z-index: 1;
-  }
-  
-  /* Navigation */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 25, 47, 0.8); /* Match dark blue theme */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(100, 255, 218, 0.2);
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color: #64ffda;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #64ffda;
-  }
-  
- /* About Section */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a192f; /* Dark blue background */
+  color: #fff; /* White text */
+  overflow-x: hidden;
+}
+
+/* Particles.js Background */
+.particles-background {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place behind all content */
+  pointer-events: none; /* Ensure clicks pass through to underlying elements */
+}
+
+/* Hero Section */
+#hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 6px solid #64ffda;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.6);
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #64ffda, #6ee7b7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #64ffda;
+  text-shadow: 0 0 5px #64ffda;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0;
+  animation: slideUp 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.background-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(100, 255, 218, 0.2), transparent);
+  animation: pulse 5s infinite;
+  z-index: 1;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 25, 47, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center; /* Center-align navigation links */
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem; /* Increased font size */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #64ffda;
+}
+
+/* About Section */
 #about {
-    padding: 50px 20px;
-    text-align: center; /* Centers the text */
-  }
-  
-  #about p {
-    font-size: 1rem; /* Adjust font size for readability */
-    line-height: 1.6; /* Adds spacing between lines for better readability */
-    max-width: 600px; /* Limits the width of the paragraph for a clean look */
-    margin: 0 auto; /* Centers the paragraph horizontally */
-    text-align: justify; /* Justifies text for a clean block appearance */
-  }
-  
-  .catchy-tagline {
-    font-size: 0.9rem;
-    color: #64ffda;
-    margin-top: 10px;
-    font-style: italic;
-  }
-  
- /* Socials Section */
- 
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 800px; /* Limit width for better readability */
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  border: 2px solid rgba(100, 255, 218, 0.3); /* Teal border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2); /* Subtle glow effect */
+  text-align: center; /* Center-align content */
+}
+
+.about-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff; /* White text */
+  margin-top: 20px;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #64ffda; /* Teal heading color */
+}
 /* Socials Section */
 #socials {
-    padding: 50px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 800px; /* Limit width for better readability */
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  border: 2px solid rgba(100, 255, 218, 0.3); /* Teal border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2); /* Subtle glow effect */
+  text-align: center; /* Center-align content */
+}
+
+#socials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #64ffda; /* Teal heading color */
+}
+
+#socials p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #fff; /* White text */
+}
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #64ffda;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.social-link:hover i {
+  color: #fff;
+}
+/* Projects Section */
+#projects {
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1200px; /* Slightly wider to fit 4 cards in a row */
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  border: 2px solid rgba(100, 255, 218, 0.3); /* Teal border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2); /* Subtle glow effect */
+  text-align: center; /* Center-align content */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout */
+  gap: 30px; /* Space between cards */
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  border: 1px solid rgba(100, 255, 218, 0.2); /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 25px; /* Increased padding for better spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto; /* Allow cards to grow dynamically */
+}
+
+.project-icon {
+  font-size: 2.8rem; /* Larger icon size */
+  color: #64ffda; /* Teal color */
+  margin-bottom: 15px; /* Reduced gap between icon and content */
+}
+
+.project-content h3 {
+  font-size: 1.5rem; /* Increased font size for headings */
+  margin-bottom: 10px;
+  color: #64ffda; /* Teal heading color */
+  text-align: center; /* Ensure text is centered */
+}
+
+.tech-stack {
+  font-size: 1rem; /* Increased font size for tech stack */
+  color: #64ffda;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem; /* Increased font size for description */
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 15px; /* Space before the button */
+}
+
+.view-project-btn {
+  display: inline-block;
+  padding: 12px 25px; /* Increased padding for larger buttons */
+  background: #64ffda; /* Teal background */
+  color: #0a192f; /* Dark text color */
+  font-size: 1rem; /* Increased font size for button text */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-project-btn:hover {
+  background: #fff; /* White background on hover */
+  color: #0a192f; /* Dark text color */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #64ffda; /* Glow effect on hover */
+}
+
+/* Achievements Section */
+#achievements {
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1200px; /* Slightly wider to fit 4 cards in a row */
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  border: 2px solid rgba(100, 255, 218, 0.3); /* Teal border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2); /* Subtle glow effect */
+  text-align: center; /* Center-align content */
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Force 4 cards per row */
+  gap: 30px; /* Space between cards */
+  margin-top: 30px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
   }
-  
-  .social-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .achievement-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
   }
-  
-  .social-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #64ffda; /* Teal color */
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .social-link i {
-    font-size: 1.5rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .social-link:hover {
-    color: #fff; /* White on hover */
-    transform: scale(1.1);
-  }
-  
-  .social-link:hover i {
-    color: #fff; /* Ensure the icon also turns white on hover */
-  }
-  
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  border: 1px solid rgba(100, 255, 218, 0.2); /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px; /* Fixed height for consistency */
+}
+
+.achievement-icon {
+  font-size: 2rem; /* Larger icon size */
+  color: #64ffda; /* Teal color */
+  margin-bottom: 15px; /* Space between icon and text */
+}
+
+.achievement-content h3 {
+  font-size: 1.1rem; /* Adjusted font size for better fit */
+  margin-bottom: 5px;
+  color: #64ffda; /* Teal heading color */
+  text-align: center; /* Ensure text is centered */
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #64ffda; /* Glow effect on hover */
+}
 /* Contact Section */
 #contact {
-    padding: 50px 20px;
-    text-align: center; /* Ensures all content is centered */
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 800px; /* Limit width for better readability */
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  border: 2px solid rgba(100, 255, 218, 0.3); /* Teal border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2); /* Subtle glow effect */
+  text-align: center; /* Center-align content */
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #64ffda; /* Teal heading color */
+}
+
+#contact p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #fff; /* White text */
+}
+
+.email-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.email-link i {
+  font-size: 1.8rem;
+  color: #64ffda;
+  transition: transform 0.3s ease;
+}
+
+.email-link .text {
+  color: #fff;
+}
+
+.email-link .email-address {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.email-link .email-address:hover {
+  color: #fff;
+}
+
+.email-link:hover i {
+  transform: scale(1.2);
+}
+/* Footer */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(10, 25, 47, 0.8);
+  border-top: 1px solid rgba(100, 255, 218, 0.2);
+  font-size: 1rem; /* Increased font size */
+  color: #64ffda;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+  /* Reduce Padding and Margins */
+  .section-container {
+    padding: 30px 15px; /* Smaller padding for mobile */
+    margin: 30px auto;
   }
-  
-  #contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+
+  /* Adjust Grid Layouts */
+  .project-grid,
+  .achievement-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 20px; /* Reduced gap between items */
   }
-  
-  #contact p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #fff; /* Default text color */
-    margin-bottom: 15px; /* Adds spacing between paragraphs */
+
+  /* Reduce Font Sizes */
+  h2 {
+    font-size: 1.8rem; /* Smaller heading for mobile */
   }
-  
-  .email-link {
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column; /* Stacks elements vertically */
-    align-items: center; /* Centers elements horizontally */
-    gap: 5px; /* Adds spacing between lines */
+
+  p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+    line-height: 1.4;
   }
-  
-  .email-link i {
-    color: #64ffda; /* Teal envelope icon */
-    transition: transform 0.3s ease;
-  }
-  
-  .email-link .text {
-    color: #fff; /* Normal text color (white) */
-  }
-  
-  .email-link .email-address {
-    color: #64ffda; /* Teal color for the email link */
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s ease;
-  }
-  
-  .email-link .email-address:hover {
-    color: #fff; /* White on hover */
-  }
-  
-  .email-link:hover i {
-    transform: scale(1.2); /* Slightly enlarge the envelope icon on hover */
-  }
-  
-  /* Footer */
-  footer {
+
+  /* Adjust Project Card Height */
+  .project-card {
+    height: auto; /* Allow cards to grow dynamically */
     padding: 20px;
-    text-align: center;
-    background: rgba(10, 25, 47, 0.8); /* Match dark blue theme */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    border-top: 1px solid rgba(100, 255, 218, 0.2);
-    font-size: 0.9rem;
-    color: #64ffda;
   }
-  
-  footer p {
-    margin: 0;
+
+  /* Adjust Achievement Card Height */
+  .achievement-card {
+    height: auto; /* Allow cards to grow dynamically */
+    padding: 15px;
   }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+
+  /* Reduce Icon Sizes */
+  .project-icon,
+  .achievement-icon {
+    font-size: 2rem; /* Smaller icons for mobile */
   }
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+
+  /* Adjust Social Links */
+  .social-list {
+    gap: 10px; /* Reduced gap between social links */
   }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+
+  .social-link {
+    font-size: 0.9rem; /* Smaller font size for links */
   }
+
+  /* Adjust Email Link */
+  .email-link {
+    font-size: 1rem; /* Smaller font size for email link */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further Adjustments for Smaller Phones */
+  h2 {
+    font-size: 1.6rem; /* Even smaller headings */
+  }
+
+  p {
+    font-size: 0.8rem; /* Even smaller paragraph text */
+  }
+
+  /* Reduce Button Size */
+  .view-project-btn {
+    padding: 8px 15px; /* Smaller button padding */
+    font-size: 0.8rem; /* Smaller button text */
+  }
+}
