@@ -7,40 +7,120 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <meta name="google-site-verification" content="gjAaKMxoJpvkmApJ7ItQusjhdD6B3ic6-mKreh6bPZk" />
-  
 </head>
 <body>
-  <!-- Hero Section -->
-  <header id="hero">
-    <div class="hero-content">
-      <h1 class="name">Mohnish KJ</h1>
-      <p class="tagline">AI & ML Engineer | Traveler | Innovator</p>
-      <p class="subtitle">Let's build the future together.</p>
-    </div>
-    <div class="background-effects"></div>
-  </header>
-
+ <!-- Hero Section -->
+<header id="hero">
+  <div class="hero-content">
+    <!-- Profile Image -->
+    <img src="MohnishKJ.jpeg" alt="Profile Picture" class="profile-image">
+    <h1 class="name">Mohnish KJ</h1>
+    <p class="tagline">AI & ML Engineer | Traveler | Innovator</p>
+    <p class="subtitle">Let's build the future together.</p>
+  </div>
+  <div class="background-effects"></div>
+</header>
   <!-- Navigation -->
   <nav>
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
       <li><a href="#socials">Socials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <br>
+<section id="about" class="section-container">
+  <h2>About Me</h2>
+  <div class="about-content">
     <p>Pursuing a Bachelor's degree in Computer Science and Engineering with a specialization in AI/ML at Easwari Engineering College (SRM Group), building solutions to tackle real-world challenges, and passionate about traveling to numerous countries.</p>
-    
-  </section>
+  </div>
+</section>
+<br>
+<br>
+<!-- Projects Section -->
+<section id="projects" class="section-container">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <!-- Project 1: MedVision-AI -->
+    <div class="project-card">
+      <i class="fas fa-brain project-icon"></i> <!-- Brain Icon for AI -->
+      <div class="project-content">
+        <h3>MedVision-AI</h3>
+        <p class="tech-stack">Python · TensorFlow · GANs</p>
+        <p>Generates synthetic chest X-rays using GANs to improve AI diagnostics for rare diseases.</p>
+        <a href="https://github.com/MohnishKJ/MedVision-AI" target="_blank" class="view-project-btn">View Project</a>
+      </div>
+    </div>
 
+    <!-- Project 2: PneumoniaDoc -->
+    <div class="project-card">
+      <i class="fas fa-lungs project-icon"></i> <!-- Lungs Icon for Pneumonia -->
+      <div class="project-content">
+        <h3>PneumoniaDoc</h3>
+        <p class="tech-stack">Python · VGG19 · Transfer Learning</p>
+        <p>An AI tool for rapid pneumonia detection from X-rays with health recommendations.</p>
+        <a href="https://github.com/MohnishKJ/Pneumonia-Classifier" target="_blank" class="view-project-btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 3: WeMeet - Alumni Networking Platform -->
+    <div class="project-card">
+      <i class="fas fa-users project-icon"></i> <!-- Users Icon for Networking -->
+      <div class="project-content">
+        <h3>WeMeet - Alumni Networking Platform</h3>
+        <p class="tech-stack">Django · Python · MySQL</p>
+        <p>A platform for alumni networking with profiles, events, and job suggestions.</p>
+        <a href="https://github.com/MohnishKJ/WeMeet" target="_blank" class="view-project-btn">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+ <!-- Achievements Section -->
+<section id="achievements" class="section-container">
+  <h2>Achievements</h2>
+  <div class="achievement-grid">
+    <!-- Achievement 1 -->
+    <div class="achievement-card">
+      <i class="fas fa-bullseye achievement-icon"></i> <!-- Target Icon -->
+      <div class="achievement-content">
+        <h3>Finalist at Smart India Hackathon 2024</h3>
+      </div>
+    </div>
+
+    <!-- Achievement 2 -->
+    <div class="achievement-card">
+      <i class="fas fa-medal achievement-icon"></i> <!-- Medal Icon -->
+      <div class="achievement-content">
+        <h3>Runner-up at MINT Hackathon by PALS, IIT Madras</h3>
+      </div>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="achievement-card">
+      <i class="fas fa-medal achievement-icon"></i> <!-- Medal Icon -->
+      <div class="achievement-content">
+        <h3>Second Prize in Project Idea Presentation by the Department of CSE (AI & ML)</h3>
+      </div>
+    </div>
+
+    <!-- Achievement 4 -->
+<div class="achievement-card">
+  <i class="fas fa-file-alt achievement-icon"></i> <!-- Paper Icon -->
+  <div class="achievement-content">
+    <h3>Published a Patent on "AI-Driven Construction Activity and Progress Monitoring System"</h3>
+  </div>
+</div>
+</section>
+<br>
+<br>
 <!-- Socials Section -->
-<section id="socials">
+<section id="socials" class="section-container">
   <h2>Find Me Online</h2>
   <p>Follow my journey through these platforms:</p>
   <div class="social-list">
@@ -55,15 +135,16 @@
     </a>
   </div>
 </section>
-
-<!-- Contact Section -->
-<section id="contact">
+<br>
+<br>
+  <!-- Contact Section -->
+<section id="contact" class="section-container">
   <h2>Contact Me</h2>
   <p>Want to collaborate or just say hello? Feel free to reach out!</p>
   <p class="email-link">
-    <i class="fas fa-envelope"></i> 
-    <span class="text" align="center">Mail me here:</span> 
-    <a href="mailto:your-email@gmail.com" target="_blank" class="email-address" align="center">mohnishkj@gmail.com</a>
+    <i class="fas fa-envelope"></i>
+    <span class="text">Mail me here:</span>
+    <a href="mailto:mohnishkj@gmail.com" target="_blank" class="email-address">mohnishkj@gmail.com</a>
   </p>
 </section>
 
