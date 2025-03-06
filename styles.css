@@ -1,0 +1,259 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a192f; /* Dark blue background */
+    color: #fff; /* White text */
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section */
+  #hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    z-index: 2;
+  }
+  
+  .name {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #64ffda, #6ee7b7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #64ffda;
+    text-shadow: 0 0 5px #64ffda;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  
+  .background-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(100, 255, 218, 0.2), transparent);
+    animation: pulse 5s infinite;
+    z-index: 1;
+  }
+  
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 25, 47, 0.8); /* Match dark blue theme */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #64ffda;
+  }
+  
+ /* About Section */
+#about {
+    padding: 50px 20px;
+    text-align: center; /* Centers the text */
+  }
+  
+  #about p {
+    font-size: 1rem; /* Adjust font size for readability */
+    line-height: 1.6; /* Adds spacing between lines for better readability */
+    max-width: 600px; /* Limits the width of the paragraph for a clean look */
+    margin: 0 auto; /* Centers the paragraph horizontally */
+    text-align: justify; /* Justifies text for a clean block appearance */
+  }
+  
+  .catchy-tagline {
+    font-size: 0.9rem;
+    color: #64ffda;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+ /* Socials Section */
+ 
+/* Socials Section */
+#socials {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #64ffda; /* Teal color */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-link i {
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #fff; /* White on hover */
+    transform: scale(1.1);
+  }
+  
+  .social-link:hover i {
+    color: #fff; /* Ensure the icon also turns white on hover */
+  }
+  
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    text-align: center; /* Ensures all content is centered */
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff; /* Default text color */
+    margin-bottom: 15px; /* Adds spacing between paragraphs */
+  }
+  
+  .email-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers elements horizontally */
+    gap: 5px; /* Adds spacing between lines */
+  }
+  
+  .email-link i {
+    color: #64ffda; /* Teal envelope icon */
+    transition: transform 0.3s ease;
+  }
+  
+  .email-link .text {
+    color: #fff; /* Normal text color (white) */
+  }
+  
+  .email-link .email-address {
+    color: #64ffda; /* Teal color for the email link */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease;
+  }
+  
+  .email-link .email-address:hover {
+    color: #fff; /* White on hover */
+  }
+  
+  .email-link:hover i {
+    transform: scale(1.2); /* Slightly enlarge the envelope icon on hover */
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(10, 25, 47, 0.8); /* Match dark blue theme */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-top: 1px solid rgba(100, 255, 218, 0.2);
+    font-size: 0.9rem;
+    color: #64ffda;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
